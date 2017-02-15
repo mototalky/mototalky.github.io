@@ -1645,7 +1645,7 @@
 /* Nav */
 
 	#nav {
-		background-color: #282828;
+		background-color: #fff;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -1653,6 +1653,7 @@
 		width: 100%;
 		z-index: 10000;
 		cursor: default;
+		border-bottom: 3px solid #f9f9f9;
 	}
 
 		#nav ul {
