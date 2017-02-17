@@ -1993,16 +1993,16 @@
 
 		/* Basic */
 
-				.google_play_store{
-				height:64px;
-				width:128px;
+			.google_play_store{
+				height:56px;
+				width:112px;
 			}
 			.welcomemsg{
 				color:#fff;
 				font-family:montserrathairline,sans-serif; 
 				float:left;
-				margin-top: 35%;
-				font-size:16px;
+				margin-top:30%;
+				font-size:14px;
 			}
 		
 		
