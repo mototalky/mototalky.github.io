@@ -1734,6 +1734,7 @@
 				font-family:montserrathairline,sans-serif; 
 				float:left;
 			}	
+
 /* Desktop */
 
 	@media screen and (min-width: 737px) {
@@ -1964,12 +1965,11 @@
 		/* Wrappers */
 
 			.wrapper {
-				padding: 15em 0 15em 0;
 				text-align: center;
 			}
 
 				.wrapper.first {
-					padding-top: 9em;
+					padding-top: 15em;
 				}
 
 				.wrapper.style4 .row-special {
@@ -2172,3 +2172,4 @@
 				font-size:12px;
 			}
 	}
+	
