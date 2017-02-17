@@ -2157,3 +2157,18 @@
 				}
 
 	}
+	
+	
+	@media only screen and (max-width: 500px) {
+			.google_play_store{
+				height:48px;
+				width:108px;
+			}
+			.welcomemsg{
+				color:#fff;
+				font-family:montserrathairline,sans-serif; 
+				float:left;
+				margin-top:20%;
+				font-size:12px;
+			}
+	}
