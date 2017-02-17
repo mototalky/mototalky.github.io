@@ -1965,11 +1965,12 @@
 		/* Wrappers */
 
 			.wrapper {
+				padding: 25em 0 25em 0;
 				text-align: center;
 			}
 
 				.wrapper.first {
-					padding-top: 15em;
+					padding-top: 9em;
 				}
 
 				.wrapper.style4 .row-special {
