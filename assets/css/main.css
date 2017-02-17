@@ -1726,6 +1726,8 @@
 	@media screen and (min-width: 737px) {
 
 		/* Basic */
+		
+		
 
 			body, input, textarea, select {
 				font-size: 13pt;
@@ -1959,9 +1961,14 @@
 
 		/* Basic */
 
+			.google_play_store{
+				height:64px;
+				width:128px;
+			}
 		
 			.welcomemsg{
 				margin-top: 35%;
+				font-size:12px;
 			}
 			body, input, textarea, select {
 				line-height: 1.75em;
