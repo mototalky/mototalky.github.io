@@ -9,6 +9,7 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 					<link rel="stylesheet" href="assets/css/main.css" />
 	
 		<style type="text/css">
@@ -42,11 +43,19 @@
 				video3.play();
 			},false);
 	}
+	</script>
+	<script>
+		$("#one").click(function() {
+			$('html, body').animate({
+				scrollTop: $("#title1").offset().top
+		}, 2000);
+		});
     </script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body onload="init()">
+
 
 		<!-- Nav -->
 			<nav id="nav">
@@ -56,8 +65,20 @@
 			</nav>
 
 		<!-- Home -->	
-			
-		<div id="test" onmousewheel="test();" style="height:100vh; background:url('images/moto_talky_bkg.jpeg'); background-size:100% 100%;">
+
+		<div class="pageslider">
+
+		 <div class="nav-dots">
+    <div data-slide="1" class="nav-dot" id="one"> </div>
+    <div data-slide="2" class="nav-dot"> </div>
+    <div data-slide="3" class="nav-dot"> </div>
+    <div data-slide="4" class="nav-dot"> </div>
+    <div data-slide="5" class="nav-dot"> </div>
+  </div>
+		
+
+	
+			<div id="test" onmousewheel="test();" style="height:100vh; background:url('images/moto_talky_bkg.jpeg'); background-size:100% 100%;">
 				<div class="wrapper">
 				<article id="work">
 					<div class="container">
@@ -78,11 +99,11 @@
 						</a>
 					</div>
 				</article>
-		</div>
-		</div>
+				</div>
+			</div>
 
-		
 		<!-- Work -->
+		
 			<div class="wrapper style1"  id="title1" onscroll="test()">
 				<article id="work">
 					
@@ -112,6 +133,9 @@
 	
 	
 	<!-- Work -->
+	
+	
+
 			<div class="wrapper style2">
 				<article id="work">
 					
@@ -143,9 +167,8 @@
 
 	
 	
-	
-	
 	<!-- Work -->
+	
 			<div class="wrapper style3">
 				<article id="work">
 					
@@ -173,8 +196,7 @@
 			</div>
 
 
-			
-			
+	</div>
 		<!-- Contact -->
 			<div class="wrapper style4" style="padding:1em 0em 1em 0em">
 					<footer>
@@ -193,8 +215,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
-			
+	
 		
 	</body>
 </html>
