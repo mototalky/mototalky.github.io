@@ -34,17 +34,17 @@
 
 		function init() {
 			var video = document.getElementById('video');
-				video.addEventListener('touchstart',function(){
+				video.addEventListener('click',function(){
 				video.play();
 			},false);
 	
 			var video2 = document.getElementById('video2');
-				video2.addEventListener('touchstart',function(){
+				video2.addEventListener('click',function(){
 				video2.play();
 			},false);
 	
 			var video3 = document.getElementById('video3');
-				video3.addEventListener('touchstart',function(){
+				video3.addEventListener('click',function(){
 				video3.play();
 			},false);
 	}
@@ -101,11 +101,9 @@
 						<div class="row">
 							<div class="6u 12u(mobile)">
 		
-								<video id="video" autoplay="" class="video" loop autobuffer muted poster="images/video.png">
+								<video id="video" autoplay="" class="video" loop autobuffer poster="images/video.png">
 									<source src="video/video.webm" type="video/webm"></source>
 									<source src="video/video.ogg" type="video/ogg"></source>
-									<source src="video/video.mp4" type="video/mp4"></source>
-
 									Your browser does not support HTML5 video.
 								</video>
 							</div>
@@ -142,11 +140,9 @@
 							
 							<div class="6u 12u(mobile)">
 		
-								<video id="video2" autoplay=""  class="video" loop autobuffer muted poster="images/video2.png">
+								<video id="video2" autoplay=""  class="video" loop autobuffer poster="images/video2.png">
 									<source src="video/video.webm" type="video/webm"></source>
 									<source src="video/video.ogg" type="video/ogg"></source>
-									<source src="video/video.mp4" type="video/mp4"></source>
-
 									Your browser does not support HTML5 video.
 								</video>
 							</div>
@@ -169,10 +165,9 @@
 						<div class="row">
 							<div class="6u 12u(mobile)">
 		
-								<video id="video3" autoplay=""  class="video" loop autobuffer muted poster="images/video3.png">
+								<video id="video3" autoplay=""  class="video" loop autobuffer poster="images/video3.png">
 									<source src="video/video.webm" type="video/webm"></source>
 									<source src="video/video.ogg" type="video/ogg"></source>
-									<source src="video/video.mp4" type="video/mp4"></source>
 									Your browser does not support HTML5 video.
 								</video>
 							</div>
