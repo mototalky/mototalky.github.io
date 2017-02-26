@@ -10,7 +10,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-					<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="http://allfont.net/allfont.css?fonts=montserrat-hairline" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 
 	
 		<style type="text/css">
@@ -66,7 +67,7 @@
 		<div class="fliplayout">	
 			
 		<!-- Section-1 -->	
-			<div id="test" class="test123" onmousewheel="test();" style="height:100vh; background:url('images/moto_talky_bkg.png'); background-size:100% 100%;">
+			<div id="test" class="flipscroll" onmousewheel="test();" style="height:100vh; background:url('images/moto_talky_bkg.png'); background-size:100% 100%;">
 				<div class="wrapper">
 				<article id="work">
 					<div class="container">
@@ -93,7 +94,7 @@
 			
 		<!-- Section-2 -->
 		
-			<div class="wrapper style1 test123"  style="height:100vh;" id="title1" onscroll="test()">
+			<div class="wrapper style1 flipscroll"  style="height:100vh; background-color:#e0eee0;" id="title1" onscroll="test()"> <!--rgba(119, 136, 153, 0.5)-->
 				<article id="work">
 					
 					<div class="container">
@@ -108,10 +109,11 @@
 									Your browser does not support HTML5 video.
 								</video>
 							</div>
-							<div class="6u 12u(mobile)">
-								<h2 style="color:#42a5f5;"> Drive Safely without any Disturbances </h2>
-								
-							<p>With DriveMode you will not get disturbed while driving, it reply backs with SMS to the callers, allows important callers to reach you. Happy Driving... </p>
+							
+							<div class="6u 12u(mobile)" style="margin-top:5em;">
+							<h2 class="headingstyle">Drive Safely without any Disturbance</h2>
+					
+							<h6 style="color: #694222; font-family: arial; font-weight: normal; letter-spacing: 1px;">With DriveMode you will not get disturbed while driving, it reply backs with SMS to the callers, allows important callers to reach you. Happy Driving... </h6>
 				
 							</div>
 							
@@ -125,16 +127,16 @@
 	
 	<!-- Section-3-->	
 
-			<div class="wrapper style2 test123" style="height:100vh;">
+			<div class="wrapper style1 flipscroll" style="height:100vh; background-color:#87ceeb;"> <!--e0eee0-->
 				<article id="work">
 					
 					<div class="container">
 						<div class="row">
 						
-						<div class="6u 12u(mobile)">
-							<h2 style="color:#42a5f5;"> Connect to other vehicles. Say Hello or Help in an accident </h2>
-							
-							<p>Now Vehicle too will have online identity.. You can search with vehicle number, Message to the owner. In case of emergency you can contact the friends and relatives</p>
+						<div class="6u 12u(mobile)" style="margin-top:5em;">
+							<h2 class="headingstyle"> Connect to other vehicles. Say Hello or Help in an accident </h2>
+					
+							<h6 style="color: #694222; font-family: arial; font-weight: normal; letter-spacing: 1px;">Now Vehicle too will have online identity.. You can search with vehicle number, Message to the owner. In case of emergency you can contact the friends and relatives</h6>
 				
 							</div>
 							
@@ -160,7 +162,7 @@
 	
 	<!-- Section-4 -->
 	
-			<div class="wrapper style3 test123"  style="height:100vh;">
+			<div class="wrapper style1 flipscroll"  style="height:100vh; background-color:#e6e6fa;">
 				<article id="work">
 					
 					<div class="container">
@@ -174,10 +176,10 @@
 									Your browser does not support HTML5 video.
 								</video>
 							</div>
-							<div class="6u 12u(mobile)">
-								<h2 style="color:#42a5f5;">Documents and Reminders.. Good bye to paper documents </h2>
+							<div class="6u 12u(mobile)" style="margin-top:5em;">
+								<h2 class="headingstyle">Documents and Reminders.. Good bye to paper documents </h2>
 						
-							<p>Moto Talky helps you in storing and sorting the documents and also to easily access it.. No more searching and reminds you if the document expires or you need to service your vehicle. </p>
+							<h6 style="color: #694222; font-family: arial; font-weight: normal; letter-spacing: 1px;">Moto Talky helps you in storing and sorting the documents and also to easily access it.. No more searching and reminds you if the document expires or you need to service your vehicle. </h6>
 				
 							</div>
 							
@@ -192,7 +194,7 @@
 		</div>	
 
 		<!-- Contact -->
-		<!--	<div class="wrapper style4" style="padding:1em 0em 1em 0em">
+			<div class="wrapper style4" style="padding:10px 0px 10px 0px;">
 					<footer>
 						<ul id="copyright">
 							<li>&copy; 2017 Untitled. All rights reserved.</li><li>Moto Talky</a></li>
@@ -200,7 +202,7 @@
 					</footer>
 				</article>
 			</div>
-		-->
+		
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -214,12 +216,13 @@
 	
 	<script>
 		$(document).ready(function() {
-			$(".test123").css("min-height", $(window).height() + "px");
+			$(".flipscroll").css("min-height", $(window).height() + "px");
 			$(".fliplayout").sectionsnap({
 				delay : 10
-				, selector : '.test123'
-				, reference : 1
+				, selector : '.flipscroll'
+				, reference : 1 
 				, animationTime : 1000
+				, scrollingSpeed: 500
 			});
 		});
 	</script>

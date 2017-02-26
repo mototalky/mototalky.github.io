@@ -1731,8 +1731,9 @@
 			.welcomemsg{
 				color:#fff;
 				font-size:24px;
-				font-family:montserrathairline,sans-serif; 
+				font-family: 'Montserrat Hairline', arial; 
 				float:left;
+				letter-spacing: 2px;
 			}	
 
 /* Desktop */
@@ -1748,8 +1749,9 @@
 			.welcomemsg{
 				color:#fff;
 				font-size:24px;
-				font-family:montserrathairline,sans-serif; 
+				font-family: 'Montserrat Hairline', arial;
 				float:left;
+				letter-spacing: 2px;
 			}
 
 			body, input, textarea, select {
@@ -1943,8 +1945,9 @@
 			.welcomemsg{
 				color:#fff;
 				font-size:18px;
-				font-family:montserrathairline,sans-serif; 
+				font-family: 'Montserrat Hairline', arial;
 				float:left;
+				letter-spacing: 2px;
 			}
 			.welcomemsg{
 				margin-top: 10%;
@@ -2000,10 +2003,11 @@
 			}
 			.welcomemsg{
 				color:#fff;
-				font-family:montserrathairline,sans-serif; 
+				font-family: 'Montserrat Hairline', arial;	
 				float:left;
 				margin-top:30%;
 				font-size:14px;
+				letter-spacing: 2px;
 			}
 		
 		
@@ -2167,9 +2171,31 @@
 			}
 			.welcomemsg{
 				color:#fff;
-				font-family:montserrathairline,sans-serif; 
+				font-family: 'Montserrat Hairline', arial;				
 				float:left;
 				margin-top:20%;
 				font-size:12px;
+				letter-spacing: 2px;
 			}
 	}
+	
+	
+	.headingstyle{
+		
+		font-family: 'Montserrat Hairline', sans-serif; 
+		color:#694222;
+		font-weight: 150;
+		letter-spacing: 2px;
+		text-transform:uppercase;	
+		text-shadow: 4px 4px 4px #aaa;		
+	}
+	
+
+	.subheadingstyle{
+		color: #694222;
+		font-family: sans-serif;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+
+	
