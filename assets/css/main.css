@@ -1733,7 +1733,7 @@
 				font-size:24px;
 				font-family: 'Montserrat Hairline', arial; 
 				float:left;
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 			}	
 
 /* Desktop */
@@ -1751,9 +1751,15 @@
 				font-size:24px;
 				font-family: 'Montserrat Hairline', arial;
 				float:left;
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 			}
 
+			.headingstyle{
+				font-size:2em;
+			}
+			.contentstyle{
+				font-size: 2em;
+			}
 			body, input, textarea, select {
 				font-size: 13pt;
 			}
@@ -1947,10 +1953,16 @@
 				font-size:18px;
 				font-family: 'Montserrat Hairline', arial;
 				float:left;
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 			}
 			.welcomemsg{
 				margin-top: 10%;
+			}
+			.headingstyle{
+				font-size:1.5em;
+			}
+			.contentstyle{
+				font-size:1.5em;
 			}
 			body {
 				min-width: 960px;
@@ -2007,10 +2019,15 @@
 				float:left;
 				margin-top:30%;
 				font-size:14px;
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 			}
 		
-		
+			.headingstyle{
+				font-size:1.2em;
+			}
+			.contentstyle{
+				font-size:1.2em;
+			}
 
 			body, input, textarea, select {
 				line-height: 1.75em;
@@ -2175,7 +2192,13 @@
 				float:left;
 				margin-top:20%;
 				font-size:12px;
-				letter-spacing: 2px;
+				letter-spacing: 1px;
+			}
+			.headingstyle{
+				font-size:1em;
+			}
+			.contentstyle{
+				font-size: 1em;
 			}
 	}
 	
@@ -2191,9 +2214,9 @@
 	}
 	
 
-	.subheadingstyle{
+	.contentstyle{
 		color: #694222;
-		font-family: sans-serif;
+		font-family: arial;
 		font-weight: normal;
 		letter-spacing: 1px;
 	}
