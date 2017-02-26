@@ -1758,7 +1758,7 @@
 				font-size:2em;
 			}
 			.contentstyle{
-				font-size: 2em;
+				font-size: 24px;
 			}
 			body, input, textarea, select {
 				font-size: 13pt;
@@ -1962,7 +1962,7 @@
 				font-size:1.5em;
 			}
 			.contentstyle{
-				font-size:1.5em;
+				font-size:18px;
 			}
 			body {
 				min-width: 960px;
@@ -2026,7 +2026,7 @@
 				font-size:1.2em;
 			}
 			.contentstyle{
-				font-size:1.2em;
+				font-size:14px;
 			}
 
 			body, input, textarea, select {
@@ -2192,13 +2192,15 @@
 				float:left;
 				margin-top:20%;
 				font-size:12px;
-				letter-spacing: 1px;
 			}
 			.headingstyle{
 				font-size:1em;
 			}
 			.contentstyle{
-				font-size: 1em;
+				font-size: 12px;
+			}
+			.video{
+				width:30%;
 			}
 	}
 	
