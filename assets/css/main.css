@@ -1649,7 +1649,7 @@
 		text-align: center;
 		position: fixed;
 		left: 0;
-		height:72px;
+		height:56px;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
@@ -2207,12 +2207,12 @@
 	
 	.headingstyle{
 		
-		font-family: 'Montserrat Hairline', sans-serif; 
+		/*font-family: 'Montserrat Hairline', sans-serif; */
+		font-family:arial;
 		color:#694222;
-		font-weight: 150;
-		letter-spacing: 2px;
-		text-transform:uppercase;	
-		text-shadow: 4px 4px 4px #aaa;		
+		font-size:36px;
+		/*letter-spacing: 2px;*/
+		/*text-shadow: 4px 4px 4px #aaa;*/		
 	}
 	
 
@@ -2220,6 +2220,26 @@
 		color: #694222;
 		font-family: arial;
 		font-weight: normal;
-		letter-spacing: 1px;
+		font-size:20px;
+		/*letter-spacing: 1px;*/
 	}
 
+
+	
+	#title1{
+		background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+		background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+		background: linear-gradient(#4BBFC3,#7BAABE);
+	}
+
+	#title2{
+		background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
+		background: -webkit-linear-gradient(#92a1ca, #76c2bd);
+		background: linear-gradient(#92a1ca,#76c2bd);
+	}
+
+	#test, #title3{
+		background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+		background: -webkit-linear-gradient(#7BAABE, #969AC6);
+		background: linear-gradient(#7BAABE,#969AC6);
+	}
