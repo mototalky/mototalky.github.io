@@ -1755,10 +1755,10 @@
 			}
 
 			.headingstyle{
-				font-size:2em;
+				font-size:36px;
 			}
 			.contentstyle{
-				font-size: 24px;
+				font-size: 20px;
 			}
 			body, input, textarea, select {
 				font-size: 13pt;
@@ -1959,10 +1959,10 @@
 				margin-top: 10%;
 			}
 			.headingstyle{
-				font-size:1.5em;
+				font-size:28px;
 			}
 			.contentstyle{
-				font-size:18px;
+				font-size:16px;
 			}
 			body {
 				min-width: 960px;
@@ -2023,7 +2023,7 @@
 			}
 		
 			.headingstyle{
-				font-size:1.2em;
+				font-size:24px;
 			}
 			.contentstyle{
 				font-size:14px;
@@ -2194,7 +2194,7 @@
 				font-size:12px;
 			}
 			.headingstyle{
-				font-size:1em;
+				font-size:20px;
 			}
 			.contentstyle{
 				font-size: 12px;
@@ -2206,13 +2206,9 @@
 	
 	
 	.headingstyle{
-		
-		/*font-family: 'Montserrat Hairline', sans-serif; */
 		font-family:arial;
 		color:#694222;
-		font-size:36px;
-		/*letter-spacing: 2px;*/
-		/*text-shadow: 4px 4px 4px #aaa;*/		
+		
 	}
 	
 
@@ -2220,8 +2216,7 @@
 		color: #694222;
 		font-family: arial;
 		font-weight: normal;
-		font-size:20px;
-		/*letter-spacing: 1px;*/
+	
 	}
 
 
