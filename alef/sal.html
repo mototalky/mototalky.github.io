@@ -5,7 +5,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript">
     var accessToken = "475a471d1ab74267a66570d2e9fc43f4",
-      subscriptionKey = "4c62f0fa-adf8-4ec0-ba8b-098271ca3361",
       baseUrl = "https://api.api.ai/v1/",
       $speechInput,
       $recBtn,
@@ -95,8 +94,7 @@
         dataType: "json",
         headers: {
           "Authorization": "Bearer " + accessToken,
-          "ocp-apim-subscription-key": subscriptionKey
-        },
+          },
         data: JSON.stringify({q: text, lang: "en"}),
 
         success: function(data) {
