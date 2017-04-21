@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple chat UI</title>
+
+	<script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Nunito:300'>
+
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/angular-tooltips.min.css">
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-tooltips.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/bots.service.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+  <div ng-view></div>
+
+  
+  <script type = "text/ng-template" id = "chat.htm">
+	<div class="conversation" ng-controller="chatController as chat">
+	  <div class="heading">
+		<div class="convn-info">Elisa and {{chat.userName}}</div>
+	  </div>
+	  <div class="conversation-body">
+		<div ng-repeat="message in chat.messages">
+			<div ng-if="message.username==chat.automatedVoiceName">
+			  <div class="krm">{{message.username}}:
+			  <div class="content">{{message.content}}</div>
+			  <div class="message-time">{{message.time}} </div>
+			  </div>
+			</div>
+			<div ng-if="message.username==chat.userName">
+			  <div class="luky">{{message.username}}:
+				<div class="content">{{message.content}}</div>
+				<div class="message-time">{{message.time}}</div>
+			  </div>
+			</div>
+		  </div>
+		  <a id="bottom"></a>
+		</div>
+		<div class="footer">
+			<input type="image" ng-click="chat.submit()" tooltips tooltip-template="Tap to talk" src="images/Mic.png" style="height: 50px;width: 50px;" />
+	   </div>
+	</div>
+  </script>
+  
+  
+    <script type = "text/ng-template" id = "main.htm">
+  
+	  <div class="mainpage" ng-controller="mainController as main">
+			
+		  <input type="image" ng-click="chat.submit()" src="images/Mic.png" style="height: 100px;width: 100px;" />
+				
+		  <div class="footer">{{main.welcomeMsg}}
+		  <br/><br/>
+		  <button  ng-click="main.takeToChat()"  style="color: #750c10;"> {{main.secondMsg}}</button>
+		  </div>
+	  
+	  </div>
+  
+  <script>
+
+  </body>
+</html>
