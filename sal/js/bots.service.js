@@ -20,7 +20,7 @@
       }
     ];
    
-    bots.accessToken = "80f6d7297e09442abb3a4bba233d3d2b";
+    bots.accessToken = "475a471d1ab74267a66570d2e9fc43f4";
     bots.baseUrl = "https://api.api.ai/v1/"
     bots.recognition=undefined;
     bots.messageRecording = "Recording...";

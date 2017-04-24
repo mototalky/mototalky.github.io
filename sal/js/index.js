@@ -25,7 +25,7 @@ function mainController($location){
 	
 	var main = this;
 	
-	main.welcomeMsg='Hi,I am Elisa your personal teacher. I am more than happy to help you';
+	main.welcomeMsg='Hi,I am Sal your personal teacher. I am more than happy to help you';
 	main.secondMsg='Click here to talk.';
 	main.takeToChat = function(){
 		$location.path('/chat');
@@ -41,7 +41,7 @@ function chatController($rootScope, $scope,  $location, $anchorScroll, BotsServi
   var chat = this;
   chat.messages=BotsService.messages;
   chat.userName='Matt';
-  chat.automatedVoiceName = 'Elisa';
+  chat.automatedVoiceName = 'Sal';
   $rootScope.welcomeCall=false;
 
 	chat.submit = function(){
