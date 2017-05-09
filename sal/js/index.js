@@ -4,7 +4,7 @@ var app = angular.module("app",['ngRoute','720kb.tooltips']);
 
 app.config(['$routeProvider', function($routeProvider) {
    $routeProvider.
-   
+
    when('/', {
       templateUrl: 'main.htm', controller: 'mainController'
    }).
@@ -14,7 +14,7 @@ app.config(['$routeProvider', function($routeProvider) {
    otherwise({
       redirectTo: '/'
    });
-	
+
 }]);
 
 
@@ -22,15 +22,15 @@ app.config(['$routeProvider', function($routeProvider) {
 app.controller('mainController', mainController);
 
 function mainController($location){
-	
+
 	var main = this;
-	
+
 	main.welcomeMsg='Hi,I am Sal your personal teacher. I am more than happy to help you';
 	main.secondMsg='Click here to talk.';
 	main.takeToChat = function(){
 		$location.path('/chat');
 	}
-	
+
 }
 
 
@@ -48,31 +48,30 @@ function chatController($rootScope, $scope,  $location, $anchorScroll, BotsServi
         BotsService.switchRecognition(chat.messages);
 		//chat.gotoBottom();
 	}
-	
+
 	chat.gotoBottom = function (){
       // set the location.hash to the id of
       // the element you wish to scroll to.
       $location.hash('bottom');
- 
+
       // call $anchorScroll()
       $anchorScroll();
-      
+
     };
-	
+
 	$rootScope.$on('voiceToTextEvent', function () {
 		chat.messages=BotsService.getMessages();
 		$scope.$apply();
-		
+
     });
-	
+
 	angular.element(function () {
 		if(!$rootScope.welcomeCall){
 			$rootScope.welcomeCall=true;
 			BotsService.respond(chat.messages[0].content);
 		}
-		
-		
+
+
     });
 }
 })();
-

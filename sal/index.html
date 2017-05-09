@@ -2,7 +2,7 @@
 <html ng-app="app">
   <head>
     <meta charset="UTF-8">
-    <title>Simple chat UI</title>
+    <title>Sal</title>
 
 	<script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/angular-tooltips.min.css">
-	
+
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-tooltips.min.js"></script>
 	<script src="js/angular-route.min.js"></script>
+  <script src="js/ApiAi.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/bots.service.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,11 +26,11 @@
 
   <div ng-view></div>
 
-  
+
   <script type = "text/ng-template" id = "chat.htm">
 	<div class="conversation" ng-controller="chatController as chat">
 	  <div class="heading">
-		<div class="convn-info">Elisa and {{chat.userName}}</div>
+		<div class="convn-info">Sal and {{chat.userName}}</div>
 	  </div>
 	  <div class="conversation-body">
 		<div ng-repeat="message in chat.messages">
@@ -53,21 +54,21 @@
 	   </div>
 	</div>
   </script>
-  
-  
+
+
     <script type = "text/ng-template" id = "main.htm">
-  
+
 	  <div class="mainpage" ng-controller="mainController as main">
-			
+
 		  <input type="image" ng-click="chat.submit()" src="images/Mic.png" style="height: 100px;width: 100px;" />
-				
+
 		  <div class="footer">{{main.welcomeMsg}}
 		  <br/><br/>
 		  <button  ng-click="main.takeToChat()"  style="color: #750c10;"> {{main.secondMsg}}</button>
 		  </div>
-	  
+
 	  </div>
-  
+
   <script>
 
   </body>

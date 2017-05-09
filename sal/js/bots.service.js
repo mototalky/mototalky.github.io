@@ -1,17 +1,17 @@
 (function() {
   'use strict';
-  
+
   var app = angular.module("app");
   app.service('BotsService', function($rootScope){
-   
+
    var bots = this;
-   
-   bots.automatedVoiceName = 'Elisa'; 	
+
+   bots.automatedVoiceName = 'Sal';
    bots.defaultMsg = 'Hi Matt. I am '+ bots.automatedVoiceName +' your personal teacher, How can I help you?';
    bots.getCurrentTime=function(){
 	   var d = new Date(); // for now
 	   return d.getHours()+":"+d.getMinutes();
-   }   
+   }
    bots.messages = [
       {
         'username': bots.automatedVoiceName,
@@ -19,7 +19,7 @@
 		'time':bots.getCurrentTime()
       }
     ];
-   
+
     bots.accessToken = "475a471d1ab74267a66570d2e9fc43f4";
     bots.baseUrl = "https://api.api.ai/v1/"
     bots.recognition=undefined;
@@ -27,7 +27,9 @@
     bots.messageCouldntHear = "I couldn't hear you, could you say that again?",
     bots.messageInternalError = "Oh no, there has been an internal server error",
     bots.messageSorry = "I'm sorry, I don't have the answer to that yet.";
-   
+    bots.client = new ApiAi.ApiAiClient({accessToken: bots.accessToken, streamClientClass: ApiAi.ApiAiStreamClient});
+    bots.streamClient = bots.client.createStreamClient();
+
       bots.startRecognition = function() {
       bots.recognition = new webkitSpeechRecognition();
       bots.recognition.continuous = false;
@@ -90,30 +92,49 @@
 
      bots.send = function(textVal) {
       var text = textVal;
-      $.ajax({
-        type: "POST",
-        url: bots.baseUrl + "query",
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        headers: {
-          "Authorization": "Bearer " + bots.accessToken
-        },
-        data: JSON.stringify({query: text, lang: "en", sessionId: "5d4c865e-f38a-49a4-badb-02924b2d6ca8"}),
+      // $.ajax({
+      //   type: "POST",
+      //   url: bots.baseUrl + "query",
+      //   contentType: "application/json; charset=utf-8",
+      //   dataType: "json",
+      //   headers: {
+      //     "Authorization": "Bearer " + bots.accessToken
+      //   },
+      //   data: JSON.stringify({query: text, lang: "en", sessionId: "5d4c865e-f38a-49a4-badb-02924b2d6ca8"}),
+      //
+      //   success: function(data) {
+      //     bots.prepareResponse(data);
+      //   },
+      //   error: function() {
+      //     bots.respond(bots.messageInternalError);
+      //   }
+      // });
 
-        success: function(data) {
-          bots.prepareResponse(data);
-        },
-        error: function() {
+
+
+      bots.streamClient.init();
+      bots.streamClient.open();
+      bots.client.textRequest(text).
+      then(function(response) {
+        try {
+          bots.prepareResponse(response);
+          bots.streamClient.close();
+        } catch(error) {
           bots.respond(bots.messageInternalError);
+          bots.streamClient.close();
         }
+
+      })
+      .catch(function(err) {
+          bots.respond(bots.messageInternalError);
+          bots.streamClient.close();
       });
-	  
-	 
+
     }
 
      bots.prepareResponse=function(val) {
       var debugJSON = JSON.stringify(val, undefined, 2),
-        spokenResponse = val.result.speech;
+        spokenResponse = val.result.fulfillment.speech;
 
       bots.respond(spokenResponse);
       bots.debugRespond(debugJSON);
@@ -146,14 +167,14 @@
       }
 
    }
-   
 
-  
+
+
   bots.getMessages=function(){
-	 return bots.messages; 
+	 return bots.messages;
   }
-   
-   
+
+
   });
-  
+
 })();
